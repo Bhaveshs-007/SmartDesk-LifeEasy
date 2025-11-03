@@ -1,4 +1,4 @@
-# SmartDesk — Python Productivity Assistant
+# SmartDesk - Python Productivity Assistant
 
 [![Build Status](https://github.com/<your-username>/smartdesk/actions/workflows/ci.yml/badge.svg)]()
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)]()
