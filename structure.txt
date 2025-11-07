@@ -1,0 +1,50 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 743D-5456
+F:.
+³   .flake8
+³   .gitignore
+³   .pre-commit-config.yaml
+³   CHANGELOG.md
+³   ci_backup.yml
+³   CODE_OF_CONDUCT.md
+³   CONTRIBUTING.md
+³   LICENSE
+³   pyproject.toml
+³   README.md
+³   requirements.txt
+³   setup.py
+³   structure.txt
+³   
+ÃÄÄÄ.github
+³   ÀÄÄÄworkflows
+³           ci.yml
+³           publish.yml
+³           
+ÃÄÄÄdocs
+³       index.md
+³       installation.md
+³       usage.md
+³       
+ÃÄÄÄscripts
+³       run_tests.sh
+³       
+ÃÄÄÄsmartdesk
+³   ³   cli.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄfinance
+³   ³       expense_manager.py
+³   ³       visualizer.py
+³   ³       
+³   ÃÄÄÄinfo
+³   ³       weather.py
+³   ³       
+³   ÀÄÄÄtasks
+³           manager.py
+³           models.py
+³           storage.py
+³           
+ÀÄÄÄtests
+        test_expense.py
+        test_tasks.py
+        

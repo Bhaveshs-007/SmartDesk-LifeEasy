@@ -1,0 +1,22 @@
+name: CI - Smoke Test
+
+on:
+  push:
+    branches: [ fix/ci-workflow ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify Python setup
+        uses: actions/setup-python@v5
+        with:
+
+      - name: Run simple check
+        run: |
+          echo "✅ Workflow triggered successfully"
+          python --version
+          pip --version
