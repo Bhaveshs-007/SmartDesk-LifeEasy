@@ -34,13 +34,13 @@ jobs:
           set -euxo pipefail
           twine check dist/*
 
-          - name: Debug: check if secret is loaded
-            run: |
+      - name: Debug - check if secret is loaded
+        run: |
           if [ -z "${{ secrets.TEST_PYPI_API_TOKEN }}" ]; then
             echo "Secret TEST_PYPI_API_TOKEN not found!"
             exit 1
           else
-            echo "✅ Secret TEST_PYPI_API_TOKEN detected (value hidden)"
+            echo "Secret TEST_PYPI_API_TOKEN detected (value hidden)"
           fi
 
       - name: Publish to TestPyPI
@@ -50,7 +50,6 @@ jobs:
         run: |
           set -euxo pipefail
           twine upload --repository-url https://test.pypi.org/legacy/ dist/* --verbose
-
 
       - name: Done
         run: echo "🎉 Publish job completed successfully"
