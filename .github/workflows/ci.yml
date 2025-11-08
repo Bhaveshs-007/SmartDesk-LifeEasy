@@ -12,10 +12,11 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [ "3.12" ]
+        python-version: [ "3.11", "3.12" ]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,10 +25,17 @@ jobs:
 
       - name: Install dependencies
         run: |
+          set -euxo pipefail
           python -m pip install --upgrade pip
-          pip install -e .            # installs your local package (smartdesk)
-          pip install pytest
+          pip install -e .               # Install your package (smartdesk)
+          pip install pytest             # Install pytest
+          pip install -r requirements.txt || true  # Optional, if you have this file
 
       - name: Run tests
         run: |
+          set -euxo pipefail
           pytest -v
+
+      - name: Post test summary
+        if: always()
+        run: echo "Tests completed for Python ${{ matrix.python-version }}"
